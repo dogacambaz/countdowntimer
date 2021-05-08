@@ -2,22 +2,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color:#00816A ;
 }
 section{
-    height: 60vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.button-container button{
-    align-items: center;
-    justify-content: center;
+.container {
+    text-align:center;
 }
 h1{
-    font-family: 'Roboto';
     font-size: 90px;
-    padding: 15px;
+    padding: 10px;
 	border-radius: 3px;
 	background: #bffff3;
 	display: inline-block;
@@ -27,7 +26,26 @@ h1 > span{
 	border-radius: 3px;
 	background: #00816A;
 	display: inline-block;
-}
+	}
+
+    h1 .animated {animation: buzz 0.5s;}
+    @keyframes buzz {
+		0% {
+			transform: rotate(0);
+		}
+		
+		10%, 30%, 50%, 70%, 90% {
+			transform: rotate(6deg);
+		}
+		
+		20%, 40%, 60%, 80% {
+			transform: rotate(-6deg);
+		}
+		
+		100% {
+			transform: rotate(0);
+		}
+	}
 button{
     background:#078a72;
     color:white;
@@ -45,3 +63,60 @@ button:hover{
        border: solid 1px white;
        color: rgb(84, 88, 88) ;
     }
+
+.timer {
+    position: relative;
+    height: 450px;
+    width: 450px;
+  }
+  
+  /* Removes SVG styling that would hide the time label */
+  .timer-circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  /* The SVG path that displays the timer's progress */
+  .timer-path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+  }
+  
+  #time-label {
+    position: absolute;
+    height: 450px;
+    width: 450px;
+    background-color: transparent;
+    
+    top: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timer-path-remaining {
+    stroke-width: 7px;
+  
+    /* Rounds the line endings to create a seamless circle */
+    stroke-linecap: round;
+  
+    /* Makes sure the animation starts at the top of the circle */
+    transform: rotate(90deg);
+    transform-origin: center;
+  
+    /* One second aligns with the speed of the countdown timer */
+    transition: 1s linear all;
+  
+    /* Allows the ring to change color when the color value updates */
+    stroke: currentColor;
+  }
+  
+  .timer-svg {
+    /* Flips the svg and makes the animation to move left-to-right */
+    transform: scaleX(-1);
+  }
+
+  .timer-path-remaining {
+    color: rgb(19, 0, 71);
+  }
