@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color:#00816A ;
+    background-color:#018068 ;
 }
 section{
     height: 80vh;
@@ -16,17 +16,11 @@ section{
 }
 h1{
     font-size: 90px;
-    padding: 10px;
-	border-radius: 3px;
-	background: #bffff3;
+    font-family:"Helvetica Narrow","Arial Narrow",Arial,Helvetica,sans-serif;
+    color: white;
 	display: inline-block;
 }
-h1 > span{
-	padding: 15px;
-	border-radius: 3px;
-	background: #00816A;
-	display: inline-block;
-	}
+
 
     h1 .animated {animation: buzz 0.5s;}
     @keyframes buzz {
@@ -47,7 +41,7 @@ h1 > span{
 		}
 	}
 button{
-    background:#078a72;
+    background:#018068;
     color:white;
     border: solid 1px white;
     text-decoration:none;
@@ -118,5 +112,5 @@ button:hover{
   }
 
   .timer-path-remaining {
-    color: rgb(19, 0, 71);
+    color: rgb(0, 0, 0);
   }
